@@ -23,10 +23,10 @@
  *  @tparam Compare  Comparison function object type, defaults to less<Key>.
  *  @tparam Alloc  Allocator type, defaults to allocator<const Key>.
  *
- *  Analyzer supports actual statistics for the last `control_time` time. It allows implementing the "show very frequently
- *  asked keys" function. Inside of it is a lot of buckets (small analyzers) - temporary objects what are keeping statistics
- *  for all the time since creation time. The statistics from the oldest bucket is considered as "actual". Look README.md for
- *  more details.
+ *  Analyzer supports actual statistics for the last `control_time` time. It allows implementing the "show very
+ *  frequently asked keys" function. Inside of it is a lot of buckets (small analyzers) - temporary objects what are
+ *  keeping statistics for all the time since creation time. The statistics from the oldest bucket is considered as
+ *  "actual". Look README.md for more details.
  */
 template<typename Key = std::string, typename Compare = std::less<Key>>
 class FrequencyEstimationAnalyzer {
@@ -59,8 +59,8 @@ public:
      *  @return  Vector of very frequently asked keys for the last time.
      *
      *  Vector size can be different. If `number` is specified, returns min of requested in the last minute different
-     *  keys and `number`. If it is not specified, returns only keys that have been requested at >= ~10% of requests in the
-     *  last period.
+     *  keys and `number`. If it is not specified, returns only keys that have been requested at >= ~10% of requests in
+     *  the last period.
      *
      *  E.g. if `number` is not specified and there are not a single key which has been requested at >= ~10% of requests
      *  in the last period, then the returned vector is empty.

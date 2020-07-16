@@ -118,11 +118,7 @@ AccurateFrequencyAnalyzer<Key>::GetActualTop(std::chrono::time_point<std::chrono
 template<typename Key>
 void AccurateFrequencyAnalyzer<Key>::DeleteOldLogs(std::chrono::time_point<std::chrono::system_clock> time_since) {
     new_elements_since_delete_old_logs_ = 0;
-
-//    std::chrono::system_clock::time_point time_since = std::chrono::time_point_cast<std::chrono::milliseconds>(
-//            time - control_time_);
     auto lower = std::lower_bound(data_.begin(), data_.end(), KeyInfo(key_type(), time_since));
-
     data_.erase(data_.begin(), lower);
 }
 

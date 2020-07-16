@@ -27,9 +27,11 @@
  *  @tparam Alloc  Allocator type, defaults to allocator<pair<const Key, Tp>.
  *
  *  By default accordingly to the given task this map is string->string,
- *  additional function get_top_k shows all keys asked in >= 10% and maybe some
- *  more (still asked ~10%) for the last 1 minute. If there are no such keys,
- *  then shows nothing.
+ *  additional function get_top_k shows all keys asked most frequently
+ *  accordingly to the "frequency estimation algorithm" (check README.md)
+ *  for 10% and for the last minute by default. If no argument is provided,
+ *  then shows only keys which were in >= ~10% of requests. If the argument
+ *  `number` is provided, then tries to show `number` top keys.
  */
 template<typename Key = std::string, typename Tp = std::string, typename Compare = std::less<Key>, typename Alloc = std::allocator<std::pair<const Key, Tp>>>
 class MapGetFreshTopK {
@@ -38,7 +40,8 @@ public:
      *  @brief Duplicate key request frequency analyzer constructor.
      *
      *  @param control_time  Timespan, defaults to 60 seconds.
-     *  @param share_to_be_very_frequent  Share of requests for keys to be considered as "very frequent", defaults to 0.1 (10%).
+     *  @param share_to_be_very_frequent  Share of requests for keys to be
+     *  considered as "very frequent", defaults to 0.1 (10%).
      *  @param num_buckets  Amount of buckets, defaults to 12.
      *  @param bucket_size  Size of each bucket, defaults to 54.
      */
@@ -79,8 +82,9 @@ public:
      *  @return  Vector with frequently asked keys for the last minute.
      *
      *  Returned vector size can be different. If `number` is specified, returns min of requested in the last minute
-     *  different keys and `number`. If it is not specified, returns only keys that have been requested at >= ~10% of
-     *  requests in the last period.
+     *  different keys and `number`, but the top can be wrong, because math theory is designed for keys requested in
+     *  >= ~10% of requests. If it is not specified, returns only keys that have been requested at >= ~10% of
+     *  requests in the last period accordingly to the "frequency estimation algorithm".
      *
      *  E.g. if `number` is not specified and there are not a single key which has been requested at >= ~10% of requests
      *  in the last period, then the returned vector is empty.

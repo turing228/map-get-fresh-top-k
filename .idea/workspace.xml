@@ -27,10 +27,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a97c3610-d1c7-45eb-bafd-215833a5aac3" name="Default Changelist" comment="Version 1.0">
+    <list default="true" id="a97c3610-d1c7-45eb-bafd-215833a5aac3" name="Default Changelist" comment="123">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README_ENG.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_ENG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/google_tests/accurate_frequency_analyzer.h" beforeDir="false" afterPath="$PROJECT_DIR$/google_tests/accurate_frequency_analyzer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map_get_fresh_top_k_lib/frequency_estimation_analyzer.h" beforeDir="false" afterPath="$PROJECT_DIR$/map_get_fresh_top_k_lib/frequency_estimation_analyzer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map_get_fresh_top_k_lib/map_get_fresh_top_k.h" beforeDir="false" afterPath="$PROJECT_DIR$/map_get_fresh_top_k_lib/map_get_fresh_top_k.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1594766905210</updated>
       <workItem from="1594766906885" duration="3783000" />
+      <workItem from="1594897521696" duration="878000" />
     </task>
     <servers />
   </component>
@@ -84,6 +87,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Version 1.0" />
@@ -94,5 +98,9 @@
       <screen x="1920" y="0" width="3840" height="2160" />
     </state>
     <state x="3471" y="829" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.3840.2160/0.27.1920.1053@1920.0.3840.2160" timestamp="1594770476791" />
+    <state x="2092" y="127" width="3568" height="1933" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1594897971377">
+      <screen x="1920" y="0" width="3840" height="2160" />
+    </state>
+    <state x="2092" y="127" width="3568" height="1933" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.0.3840.2160/0.27.1920.1053@1920.0.3840.2160" timestamp="1594897971377" />
   </component>
 </project>
